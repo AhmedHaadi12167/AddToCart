@@ -217,8 +217,8 @@ body {
   }
 
   .cart-dropdown {
-    width: 100%; /* Ensure it fits smaller screens */
-    right: 0; /* Align with the cart button */
+    width: 90%; /* Use most of the screen width */
+    right: 5%; /* Center it horizontally */
   }
 }
 
@@ -227,13 +227,18 @@ body {
     flex: 1 1 100%; /* Stacks items in a single column */
   }
 
-  .cart-button {
-    font-size: 14px;
-    padding: 8px 16px;
+  .dropdown {
+    width: 90%; /* Full width on extra small screens */
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 
-  .cart-dropdown {
-    top: calc(100% + 5px); /* Leave space below button */
-    right: 5px;
+  .dropdown .cart-items {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .dropdown .cart-items button {
+    margin: 5px; /* Add space between buttons */
   }
 }
