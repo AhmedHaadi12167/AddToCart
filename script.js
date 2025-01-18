@@ -130,8 +130,14 @@ const loadItems = function () {
 };
 
 cartCount.addEventListener("click", function () {
-  cartDropdown.style.display =
-    cartDropdown.style.display === "none" ? "block" : "none";
+  if (
+    cartDropdown.style.display === "none" ||
+    cartDropdown.style.display === ""
+  ) {
+    cartDropdown.style.display = "block";
+  } else {
+    cartDropdown.style.display = "none";
+  }
 
   cartItems.innerHTML = "";
   loadItems();
