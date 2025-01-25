@@ -152,9 +152,3 @@ document.addEventListener("DOMContentLoaded", () => {
   cartCount.textContent = items.item.length;
   updateTotal();
 });
-
-document.addEventListener("click", function (e) {
-  !cartDropdown.contains(e.target) && cartCount !== e.target
-    ? (cartDropdown.style.display = "none")
-    : null;
-});
